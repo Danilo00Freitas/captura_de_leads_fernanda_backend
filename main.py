@@ -18,7 +18,7 @@ app.add_middleware(
 
 # Caminho do PDF
 BASE_DIR = Path(__file__).parent  # diretório onde está o main.py
-PDF_FILE_PATH = BASE_DIR / "pdf" / "PDF-teste.pdf"
+PDF_FILE_PATH = BASE_DIR / "pdf" / "material-congresso-19.09.2025.pdf"
 
 # Cria tabela de leads se não existir
 def init_db():
@@ -69,5 +69,5 @@ async def capture_lead(request: Request):
     return FileResponse(
         PDF_FILE_PATH,
         media_type="application/pdf",
-        filename="meu-arquivo.pdf"
+        filename="material-congresso-19.09.2025.pdf"
     )
